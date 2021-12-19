@@ -2,11 +2,11 @@
 // loginBtn.addEventListener("click", function(){
 //     console.log("Click me");
 // })
-function UpDateSpanText(id) {
+// function UpDateSpanText(id) {
 
-    const currentBalance = document.getElementById(id).innerText;
-    const currentBalanceNumber = parseFloat(currentBalance);
-    const totalBalance = depositNumber + currentBalanceNumber;
+//     const currentBalance = document.getElementById(id).innerText;
+//     const currentBalanceNumber = parseFloat(currentBalance);
+//     const totalBalance = depositNumber + currentBalanceNumber;
         
-    document.getElementById(id).innerText = totalBalance;
-    }    
+//     document.getElementById(id).innerText = totalBalance;
+//     }    

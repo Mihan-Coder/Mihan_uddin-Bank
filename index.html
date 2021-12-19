@@ -82,14 +82,7 @@
             
             UpDateSpanText('currentBalance', depositNumber)
             UpDateSpanText('currentDeposit', depositNumber)
-            function UpDateSpanText(id) {
 
-                const currentBalance = document.getElementById(id).innerText;
-                const currentBalanceNumber = parseFloat(currentBalance);
-                const totalBalance = depositNumber + currentBalanceNumber;
-                        
-                document.getElementById(id).innerText = totalBalance;
-                    }    
 
 
     
@@ -106,6 +99,12 @@
             const withdrawNumber = getInputNumber("withdrawAmount")
             
             UpDateSpanText("currentWithdraw", withdrawNumber)
+            UpDateSpanText("currentBalance", -1 * withdrawNumber)
+            UpDateSpanText("withdrawAmount").value = ""
+            
+
+            
+
 
         })
 
@@ -114,6 +113,15 @@
                 const amountNumber = parseFloat(amount)
                 return amountNumber;
             }
+        
+            function UpDateSpanText(id, depositNumber) {
+
+                const currentBalance = document.getElementById(id).innerText;
+                const currentBalanceNumber = parseFloat(currentBalance);
+                const totalBalance = depositNumber + currentBalanceNumber;
+                        
+                document.getElementById(id).innerText = totalBalance;
+                }    
         
         
 
